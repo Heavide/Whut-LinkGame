@@ -1,0 +1,76 @@
+﻿<Page x:Class="Arcaea_LinkGame.GamePage.Pause"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Arcaea_LinkGame.GamePage"
+      mc:Ignorable="d"
+      Title="Pause" Height="720" Width="960">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="../Resources/InGame/pause/pause_background_shadow.png"></ImageBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Grid.Row="1" Grid.Column="0"
+               Grid.ColumnSpan="3"
+               Height="330" Width="960"
+               VerticalAlignment="Center"
+               Source="../Resources/InGame/pause/pause_backing.png">
+        </Image>
+        <Label Grid.Row="1" Grid.Column="1"
+               Content="PAUSED"
+               HorizontalContentAlignment="Center"
+               FontFamily="../Resources/Fonts/#EXO"
+               FontWeight="Light"
+               Foreground="White"
+               FontSize="38"
+               Padding="0,70,0,0"
+               IsHitTestVisible="False"
+               ></Label>
+        <Button Grid.Row="1" Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Height="42.5" Width="201"
+                Style="{StaticResource BtnSetting}"
+                Tag="../Resources/InGame/pause/resume_button_pressed.png"
+                Margin="0,100,0,0"
+                Content="返回"
+                FontFamily="../Resources/Fonts/#Noto Sans CJK SC Regular"
+                Foreground="White"
+                FontSize="18"
+                FontWeight="Bold"
+                Padding="0,8,0,0"
+                x:Name="Resume"
+                Click="Resume_OnClick">
+            <Button.Background>
+                <ImageBrush ImageSource="../Resources/InGame/pause/resume_button.png"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Grid.Row="1" Grid.Column="1"
+                Grid.ColumnSpan="2"
+                Height="53.5" Width="202"
+                Style="{StaticResource BtnSetting}"
+                Tag="../Resources/InGame/pause/button_pressed.png"
+                Margin="0,100,0,0"
+                Content="退出"
+                FontFamily="../Resources/Fonts/#Noto Sans CJK SC Regular"
+                Foreground="White"
+                FontSize="18"
+                FontWeight="Bold"
+                Padding="0,13,0,0"
+                x:Name="Quit"
+                Click="Quit_OnClick">
+            <Button.Background>
+                <ImageBrush ImageSource="../Resources/InGame/pause/button.png"></ImageBrush>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Page>

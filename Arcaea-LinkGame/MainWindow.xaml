@@ -1,0 +1,24 @@
+﻿<Window x:Class="Arcaea_LinkGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Arcaea_LinkGame"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Title="MainWindow" Height="720" Width="960">
+    <Grid>
+        <Frame x:Name="Frame" NavigationUIVisibility="Hidden"></Frame>
+        <Image Source="../Resources/Main/shutter_l.png"
+               HorizontalAlignment="Left"
+               Margin="-1000,0,0,0"
+               x:Name="Left">
+        </Image>
+        <Image Source="../Resources/Main/shutter_r.png"
+               HorizontalAlignment="Right"
+               Margin="0,0,-300,0"
+               x:Name="Right">
+        </Image>
+    </Grid>
+</Window>

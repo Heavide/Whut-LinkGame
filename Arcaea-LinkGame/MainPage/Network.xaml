@@ -1,0 +1,90 @@
+﻿<Page x:Class="Arcaea_LinkGame.MainPage.Network"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Arcaea_LinkGame.MainPage"
+      mc:Ignorable="d"
+      Title="Network" Height="720" Width="960">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"></RowDefinition>
+            <RowDefinition Height="140"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Grid.Row="0" Grid.Column="0" 
+               Grid.RowSpan="6" Grid.ColumnSpan="3" 
+               Source="../Resources/Main/network/sidedialog_bottom.png"
+               Margin="0,0,200,0">
+        </Image>
+        <Image Grid.Row="0" Grid.Column="0" 
+               Grid.RowSpan="6" Grid.ColumnSpan="3" 
+               Source="../Resources/Main/network/sidedialog_top.png"
+               HorizontalAlignment="Left">
+        </Image>
+        <Label Grid.Row="0" Grid.Column="0"
+               HorizontalAlignment="Right" VerticalAlignment="Bottom"
+               FontFamily="../Resources/Fonts/#GeoSansLight"
+               FontSize="40"
+               FontWeight="Bold"
+               Foreground="White"
+               Content="Network"
+               x:Name="FormTitle">
+        </Label>
+        <Button Grid.Row="1" Grid.Column="0"
+                VerticalAlignment="Bottom"
+                Height="75" Width="246"
+                Content="登入"
+                FontFamily="../Resources/Fonts/#Noto Sans CJK SC Regular"
+                Margin="50,0,0,0"
+                Padding="0,13,0,0"
+                Foreground="White"
+                FontSize="28"
+                Style="{StaticResource BtnSetting}"
+                Tag="../Resources/Main/network/main_button_pressed.png"
+                x:Name="LogBtn"
+                Click="LogBtn_OnClick">
+            <Button.Background>
+                <ImageBrush ImageSource="../Resources/Main/network/main_button.png" />
+            </Button.Background>
+        </Button>
+        <Button Grid.Row="2" Grid.Column="0"
+                Height="75" Width="246"
+                Content="注册"
+                FontFamily="../Resources/Fonts/#Noto Sans CJK SC Regular"
+                Margin="50,0,0,0"
+                Padding="0,13,0,0"
+                Foreground="White"
+                FontSize="28"
+                Style="{StaticResource BtnSetting}"
+                Tag="../Resources/Main/network/main_button_pressed.png"
+                x:Name="RegBtn"
+                Click="RegBtn_OnClick">
+            <Button.Background>
+                <ImageBrush ImageSource="../Resources/Main/network/main_button.png" />
+            </Button.Background>
+        </Button>
+        <TextBlock Grid.Row="3" Grid.Column="0"
+                   Text="登录来获取新模式、记录成绩&#13;或使用在线功能"
+                   TextAlignment="Center"
+                   Padding="48,0,0,0"
+                   Margin="0,30,0,0"
+                   Foreground="White"
+                   FontFamily="../Resources/Fonts/#Noto Sans CJK SC Regular"
+                   FontSize="14"
+                   x:Name="Tip"
+                   >
+        </TextBlock>
+        <Frame Grid.Row="0" Grid.Column="0"
+               Grid.RowSpan="6" Grid.ColumnSpan="3"
+               x:Name="User"></Frame>
+    </Grid>
+</Page>

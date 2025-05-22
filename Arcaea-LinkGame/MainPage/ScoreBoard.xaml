@@ -1,0 +1,152 @@
+﻿<Page x:Class="Arcaea_LinkGame.MainPage.ScoreBoard"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Arcaea_LinkGame.MainPage"
+      mc:Ignorable="d"
+      Title="ScoreBoard" Height="720" Width="960">
+    <Grid>
+        <Image
+            HorizontalAlignment="Right"
+            Height="97" Width="378"
+            Source="../Resources/ScoreBoard/bar.png"
+            Margin="0,-140,0,0"/>
+        <Label HorizontalAlignment="Right"
+               Height="97" Width="97"
+               VerticalContentAlignment="Center"
+               HorizontalContentAlignment="Center"
+               Content = "1"
+               FontFamily="../Resources/Fonts/#Exo"
+               FontSize="40"
+               Foreground="White"
+               Padding="0,0,5,0"
+               Margin="0,-140,0,0">
+            <Label.Background>
+                <ImageBrush ImageSource="../Resources/ScoreBoard/0.png"></ImageBrush>
+            </Label.Background>
+        </Label>
+        <Image
+            HorizontalAlignment="Right"
+            Height="97" Width="378"
+            Margin="0,40,0,0"
+            Source="../Resources/ScoreBoard/bar.png" />
+        <Label HorizontalAlignment="Right"
+               Height="97" Width="97"
+               VerticalContentAlignment="Center"
+               HorizontalContentAlignment="Center"
+               Content = "2"
+               FontFamily="../Resources/Fonts/#Exo"
+               FontSize="40"
+               Foreground="White"
+               Padding="0,0,0,0"
+               Margin="0,40,0,0">
+            <Label.Background>
+                <ImageBrush ImageSource="../Resources/ScoreBoard/1.png"></ImageBrush>
+            </Label.Background>
+        </Label>
+        <Image
+            HorizontalAlignment="Right"
+            Height="97" Width="378"
+            Margin="0,220,0,0"
+            Source="../Resources/ScoreBoard/bar.png"/>
+        <Label HorizontalAlignment="Right"
+               Height="97" Width="97"
+               VerticalContentAlignment="Center"
+               HorizontalContentAlignment="Center"
+               Content = "3"
+               FontFamily="../Resources/Fonts/#Exo"
+               FontSize="40"
+               Foreground="White"
+               Padding="0,0,0,0"
+               Margin="0,220,0,0">
+            <Label.Background>
+                <ImageBrush ImageSource="../Resources/ScoreBoard/2.png"></ImageBrush>
+            </Label.Background>
+        </Label>
+        <Image
+            HorizontalAlignment="Right"
+            Height="97" Width="378"
+            Margin="0,400,0,0"
+            Source="../Resources/ScoreBoard/bar.png"/>
+        <Label HorizontalAlignment="Right"
+               Height="97" Width="97"
+               VerticalContentAlignment="Center"
+               HorizontalContentAlignment="Center"
+               Content = "4"
+               FontFamily="../Resources/Fonts/#Exo"
+               FontSize="40"
+               Foreground="White"
+               Padding="0,0,3,0"
+               Margin="0,400,0,0">
+            <Label.Background>
+                <ImageBrush ImageSource="../Resources/ScoreBoard/3.png"></ImageBrush>
+            </Label.Background>
+        </Label>
+        <Image
+            HorizontalAlignment="Right"
+            Height="97" Width="378"
+            Margin="0,580,0,0"
+            Source="../Resources/ScoreBoard/bar.png"/>
+        <Label HorizontalAlignment="Right"
+               Height="97" Width="97"
+               VerticalContentAlignment="Center"
+               HorizontalContentAlignment="Center"
+               Content = "5"
+               FontFamily="../Resources/Fonts/#Exo"
+               FontSize="40"
+               Foreground="White"
+               Padding="0,0,0,0"
+               Margin="0,580,0,0">
+            <Label.Background>
+                <ImageBrush ImageSource="../Resources/ScoreBoard/4.png"></ImageBrush>
+            </Label.Background>
+        </Label>
+        
+        <Label HorizontalAlignment="Right"
+               Height="97" Width="378"
+               Foreground="White"
+               FontSize="35"
+               Padding="30,15,0,0"
+               Content="__________________"
+               FontFamily="../Resources/Fonts/#Exo"
+               Margin="0,-140,0,0"
+               x:Name="First"/>
+        <Label HorizontalAlignment="Right"
+               Height="97" Width="378"
+               Foreground="White"
+               FontSize="35"
+               Padding="30,15,0,0"
+               Content="__________________"
+               FontFamily="../Resources/Fonts/#Exo"
+               Margin="0,40,0,0"
+               x:Name="Second" />
+        <Label HorizontalAlignment="Right"
+               Height="97" Width="378"
+               Foreground="White"
+               FontSize="35"
+               Padding="30,15,0,0"
+               Content="__________________"
+               FontFamily="../Resources/Fonts/#Exo"
+               Margin="0,220,0,0"
+               x:Name="Third" />
+        <Label HorizontalAlignment="Right"
+               Height="97" Width="378"
+               Foreground="White"
+               FontSize="35"
+               Padding="30,15,0,0"
+               Content="__________________"
+               FontFamily="../Resources/Fonts/#Exo"
+               Margin="0,400,0,0"
+               x:Name="Fourth" />
+        <Label HorizontalAlignment="Right"
+               Height="97" Width="378"
+               Foreground="White"
+               FontSize="35"
+               Padding="30,15,0,0"
+               Content="__________________"
+               FontFamily="../Resources/Fonts/#Exo"
+               Margin="0,580,0,0"
+               x:Name="Fifth" />
+    </Grid>
+</Page>

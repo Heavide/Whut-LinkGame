@@ -1,0 +1,183 @@
+﻿<Page x:Class="Arcaea_LinkGame.MainPage.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Arcaea_LinkGame.MainPage"
+      mc:Ignorable="d"
+      Title="MainPage" Height="720" Width="960">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="../Resources/Main/bg_light.jpg"></ImageBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="180"></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Grid.Row="0" Grid.Column="3"
+               Grid.RowSpan="6" Grid.ColumnSpan="3"
+               Height="750" Width="750"
+               Margin="-90,50,0,0"
+               Source="../Resources/char/1080/0.png"
+               x:Name="Char"
+               >
+        </Image>
+        <Frame Grid.Row="0" Grid.Column="0"
+               Grid.ColumnSpan="6"
+               x:Name="TopBar"
+               />
+        <Button Grid.Row="1" Grid.Column="2"
+                Grid.RowSpan="4" Grid.ColumnSpan="2"
+                BorderThickness="0"
+                Height="232" Width="231.5"
+                Margin="0,0,90,0"
+                Style="{StaticResource BtnSetting}"
+                Tag="../Resources/Main/world_pressed.png"
+                Click="World_OnClick"
+                x:Name="World">
+            <Button.Background>
+                <ImageBrush ImageSource="../Resources/Main/world.png"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Image Grid.Row="1" Grid.Column="2"
+               Grid.RowSpan="4" Grid.ColumnSpan="2"
+               Height="49" Width="188"
+               IsHitTestVisible="False"
+               Margin="0,0,100,0"
+               Source="../Resources/Main/world_text.png"
+               ></Image>
+        <Button Grid.Row="1" Grid.Column="0"
+                Grid.ColumnSpan="3"
+                BorderThickness="0"
+                Height="87.5" Width="319.5"
+                Margin="0,0,-40,0"
+                Content="开始游戏 &#32; &#32; &#32; "
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Top"
+                Padding="0,6,0,0"
+                FontFamily="../Resources/Fonts/#Noto Sans CJK SC Regular"
+                Foreground="White"
+                FontSize="39"
+                Style="{StaticResource BtnSetting}"
+                Tag="../Resources/Main/main_musicplay_pressed.png"
+                Click="StartClicked"
+                x:Name="Start">
+            <Button.Background>
+                <ImageBrush ImageSource="../Resources/Main/main_musicplay.png"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Grid.Row="2" Grid.Column="0"
+                Grid.ColumnSpan="3"
+                BorderThickness="0"
+                Height="87.5" Width="319.5"
+                Margin="0,0,40,0"
+                Content="更多模式 &#32; &#32; &#32; "
+                Padding="0,6,0,0"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Top"
+                FontFamily="../Resources/Fonts/#Noto Sans CJK SC Regular"
+                Foreground="White"
+                FontSize="39"
+                Style="{StaticResource BtnSetting}"
+                Tag="../Resources/Main/main_story_pressed.png"
+                Click="Mode_OnClick"
+                x:Name="Mode">
+            <Button.Background>
+                <ImageBrush ImageSource="../Resources/Main/main_story.png"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Grid.Row="3" Grid.Column="0"
+                Grid.ColumnSpan="3"
+                BorderThickness="0"
+                Height="87.5" Width="363"
+                Margin="0,0,80,0"
+                Content="段位认定 &#32; &#32; &#32; &#32; "
+                Padding="0,6,0,0"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Top"
+                FontFamily="../Resources/Fonts/#Noto Sans CJK SC Regular"
+                Foreground="White"
+                FontSize="39"
+                Style="{StaticResource BtnSetting}"
+                Tag="../Resources/Main/main_course_pressed.png"
+                Click="Course_OnClick"
+                x:Name="Course">
+            <Button.Background>
+                <ImageBrush ImageSource="../Resources/Main/main_course.png"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Grid.Row="4" Grid.Column="1"
+                Grid.ColumnSpan="2"
+                BorderThickness="0"
+                Height="87" Width="203"
+                Margin="30,0,30,0"
+                Content="退出 &#32; &#32; "
+                Padding="10,6,0,0"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Top"
+                FontFamily="../Resources/Fonts/#Noto Sans CJK SC Regular"
+                Foreground="White"
+                FontSize="39"
+                Style="{StaticResource BtnSetting}"
+                Tag="../Resources/Main/main_more_pressed.png"
+                Click="Quit_OnClick"
+                x:Name="Quit">
+            <Button.Background>
+                <ImageBrush ImageSource="../Resources/Main/main_more.png"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Grid.Row="4" Grid.Column="0"
+                Grid.ColumnSpan="2"
+                BorderThickness="0"
+                Height="87" Width="190.5"
+                Margin="20,0,50,0"
+                Style="{StaticResource BtnSetting}"
+                Tag="../Resources/Main/main_network_pressed.png"
+                Click="network_click"
+                x:Name="Net">
+            <Button.Background>
+                <ImageBrush ImageSource="../Resources/Main/main_network.png"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Grid.Row="0" Grid.Column="0"
+                Grid.RowSpan="6" Grid.ColumnSpan="6"
+                Style="{StaticResource BtnSetting}"
+                Opacity="0"
+                IsHitTestVisible="False"
+                IsEnabled="False"
+                Click="network_exit"
+                x:Name="NetExit">
+        </Button>
+        <Button Grid.Row="0" Grid.Column="0"
+                Grid.RowSpan="6" Grid.ColumnSpan="6"
+                Style="{StaticResource BtnSetting}"
+                Opacity="0"
+                IsHitTestVisible="False"
+                IsEnabled="False"
+                Click="score_exit"
+                x:Name="ScoreExit">
+        </Button>
+        <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" Grid.RowSpan="6" Source="Network.xaml" x:Name="Network">
+            <Frame.RenderTransform>
+                <TranslateTransform x:Name="NetworkAnim" X="-580" />
+            </Frame.RenderTransform>
+        </Frame>
+        <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" Grid.RowSpan="6" Source="ScoreBoard.xaml" x:Name="Scoreboard">
+            <Frame.RenderTransform>
+                <TranslateTransform x:Name="ScoreAnim" X="500" />
+            </Frame.RenderTransform>
+        </Frame>
+    </Grid>
+</Page>

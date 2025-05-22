@@ -1,0 +1,187 @@
+﻿<Page x:Class="Arcaea_LinkGame.DifficultyPage.OtherMode"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Arcaea_LinkGame.DifficultyPage"
+      mc:Ignorable="d"
+      Title="OtherMode" Height="720" Width="960">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="../Resources/Difficulty/select.jpg"></ImageBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Frame Grid.Row="0" Grid.Column="0" 
+               Grid.ColumnSpan="5"
+               x:Name="TopBar">
+        </Frame>
+        <Image Grid.Row="0" Grid.Column="1"
+                Grid.RowSpan="3"
+                Height = "470" Width="224"
+                Margin="-168,0,0,0"
+                Source="../Resources/Difficulty/pack/pack_selected.png"
+                Visibility="Hidden"
+                x:Name="BlindSelected">
+        </Image>
+        <Image Grid.Row="0" Grid.Column="2"
+               Grid.ColumnSpan="2"
+               Grid.RowSpan="3"
+               Height = "470" Width="224"
+               HorizontalAlignment="Left"
+               Margin="-15,0,0,0"
+               Source="../Resources/Difficulty/pack/pack_selected.png"
+               Visibility="Hidden"
+               x:Name="MessSelected">
+        </Image>
+        <Image Grid.Row="0" Grid.Column="3"
+               Grid.ColumnSpan="2"
+               Grid.RowSpan="3"
+               Height = "470" Width="224"
+               HorizontalAlignment="Left"
+               Margin="70,0,0,0"
+               Source="../Resources/Difficulty/pack/pack_selected.png"
+               Visibility="Hidden"
+               x:Name="SpeedSelected">
+        </Image>
+        <Button Grid.Row="0" Grid.Column="1"
+                Grid.RowSpan="3"
+                Height = "375" Width="187"
+                Margin="-170,0,0,0"
+                Style="{StaticResource BtnSetting}"
+                Tag="../Resources/Difficulty/pack/Blind.png"
+                PreviewMouseLeftButtonDown="BlindDown"
+                PreviewMouseLeftButtonUp="BlindUp"
+                Click="Blind_OnClick"
+                x:Name="Blind">
+            <Button.Background>
+                <ImageBrush ImageSource="../Resources/Difficulty/pack/Blind.png"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Label Grid.Row="0" Grid.Column="1"
+               Grid.RowSpan="3"
+               Height = "118" Width="189"
+               Margin="-170,-258,0,0"
+               Padding="0,15,0,0"
+               HorizontalContentAlignment="Center"
+               Content="Blind"
+               IsHitTestVisible="False"
+               FontSize="20"
+               FontFamily="../Resources/Fonts/#Exo"
+               Foreground="White">
+            <Label.Background>
+                <ImageBrush ImageSource="../Resources/Difficulty/pack/pack_top.png"></ImageBrush>
+            </Label.Background>
+        </Label>
+        <Button Grid.Row="0" Grid.Column="2"
+                Grid.RowSpan="3"
+                Height = "375" Width="187"
+                Margin="0,0,0,0"
+                Style="{StaticResource BtnSetting}"
+                Tag="../Resources/Difficulty/pack/pack_selected.png">
+            <Button.Background>
+                <ImageBrush ImageSource="../Resources/Difficulty/pack/normal.png"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Label Grid.Row="0" Grid.Column="2"
+               Grid.RowSpan="3"
+               Height = "118" Width="189"
+               Margin="0,-258,0,0"
+               Padding="0,15,0,0"
+               HorizontalContentAlignment="Center"
+               Content="Normal"
+               FontSize="20"
+               FontFamily="../Resources/Fonts/#Exo"
+               Foreground="White">
+            <Label.Background>
+                <ImageBrush ImageSource="../Resources/Difficulty/pack/pack_top.png"></ImageBrush>
+            </Label.Background>
+        </Label>
+        <Button Grid.Row="0" Grid.Column="2"
+                Grid.RowSpan="3"
+                Height = "375" Width="187"
+                Margin="0,0,0,0"
+                Style="{StaticResource BtnSetting}"
+                Tag="../Resources/Difficulty/pack/Mess.png"
+                PreviewMouseLeftButtonDown="MessDown"
+                PreviewMouseLeftButtonUp="MessUp"
+                x:Name="Mess"
+                Click="Mess_OnClick">
+            <Button.Background>
+                <ImageBrush ImageSource="../Resources/Difficulty/pack/Mess.png"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Label Grid.Row="0" Grid.Column="2"
+               Grid.RowSpan="3"
+               Height = "118" Width="189"
+               Margin="0,-258,0,0"
+               Padding="0,15,0,0"
+               HorizontalContentAlignment="Center"
+               Content="Mess"
+               IsHitTestVisible="False"
+               FontSize="20"
+               FontFamily="../Resources/Fonts/#Exo"
+               Foreground="White">
+            <Label.Background>
+                <ImageBrush ImageSource="../Resources/Difficulty/pack/pack_top.png"></ImageBrush>
+            </Label.Background>
+        </Label>
+        <Button Grid.Row="0" Grid.Column="3"
+                Grid.RowSpan="3"
+                Height = "375" Width="187"
+                Margin="0,0,-170,0"
+                Style="{StaticResource BtnSetting}"
+                Tag="../Resources/Difficulty/pack/Speed.png"
+                PreviewMouseLeftButtonDown="SpeedDown"
+                PreviewMouseLeftButtonUp="SpeedUp"
+                x:Name="Speed"
+                Click="Speed_OnClick"
+                >
+            <Button.Background>
+                <ImageBrush ImageSource="../Resources/Difficulty/pack/Speed.png"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Label Grid.Row="0" Grid.Column="3"
+               Grid.RowSpan="3"
+               Height = "118" Width="189"
+               Margin="0,-258,-170,0"
+               Padding="0,15,0,0"
+               HorizontalContentAlignment="Center"
+               Content="Speed"
+               IsHitTestVisible="False"
+               FontSize="20"
+               FontFamily="../Resources/Fonts/#Exo"
+               Foreground="White">
+            <Label.Background>
+                <ImageBrush ImageSource="../Resources/Difficulty/pack/pack_top.png"></ImageBrush>
+            </Label.Background>
+        </Label>
+        <Button Grid.Row="2" Grid.Column="0"
+                Height="51" Width="162"
+                VerticalAlignment="Bottom" HorizontalAlignment="Left"
+                Style="{StaticResource BtnSetting}"
+                Tag="../Resources/Main/back_pressed.png"
+                Content="主菜单"
+                Padding="0,7,20,0"
+                FontFamily="../Resources/Fonts/#Noto Sans CJK SC Regular"
+                Foreground="#423F4D"
+                FontSize="15"
+                FontWeight="Bold"
+                Click="BackClicked"
+                >
+            <Button.Background>
+                <ImageBrush ImageSource="../Resources/Main/back.png"></ImageBrush>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Page>

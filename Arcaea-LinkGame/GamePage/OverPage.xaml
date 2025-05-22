@@ -1,0 +1,28 @@
+﻿<Page x:Class="Arcaea_LinkGame.GamePage.OverPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Arcaea_LinkGame.GamePage"
+      mc:Ignorable="d"
+      Title="OverPage" Height="720" Width="960">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Rectangle Grid.Row="1" x:Name="Bg" />
+        <Image Grid.Row="0" VerticalAlignment="Bottom" x:Name="Top" />
+        <Image Grid.Row="2" VerticalAlignment="Top" x:Name="Bottom" />
+        <Image Grid.Row="0" Grid.RowSpan="3" 
+               VerticalAlignment="Center" HorizontalAlignment="Center"
+               Height="650" Width="650"
+               x:Name="Center"/> 
+        <Image Grid.Row="0" Grid.RowSpan="3" 
+               VerticalAlignment="Center" HorizontalAlignment="Center"
+               Height="90" Width="737"
+               x:Name="Text"/> 
+        <Image Grid.Row="0" x:Name="Empty"></Image>
+    </Grid>
+</Page>

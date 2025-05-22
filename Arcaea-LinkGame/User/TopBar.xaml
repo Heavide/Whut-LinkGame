@@ -1,0 +1,207 @@
+﻿<Page x:Class="Arcaea_LinkGame.User.TopBar"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Arcaea_LinkGame.User"
+      mc:Ignorable="d"
+      Title="TopBar" Height="720" Width="960">
+    <Grid>
+           <Grid.RowDefinitions>
+                  <RowDefinition Height="180"></RowDefinition>
+                  <RowDefinition Height="80"></RowDefinition>
+                  <RowDefinition Height="80"></RowDefinition>
+                  <RowDefinition Height="80"></RowDefinition>
+                  <RowDefinition Height="80"></RowDefinition>
+                  <RowDefinition></RowDefinition>
+           </Grid.RowDefinitions>
+           <Grid.ColumnDefinitions>
+                  <ColumnDefinition></ColumnDefinition>
+                  <ColumnDefinition></ColumnDefinition>
+                  <ColumnDefinition></ColumnDefinition>
+                  <ColumnDefinition></ColumnDefinition>
+                  <ColumnDefinition></ColumnDefinition>
+                  <ColumnDefinition></ColumnDefinition>
+           </Grid.ColumnDefinitions>
+           <Image Grid.Row="0" Grid.Column="0"
+                  Grid.ColumnSpan="6"
+                  Source="../Resources/Main/topbar/top_bar_bg.png"
+                  VerticalAlignment="Top"
+                  MouseLeftButtonDown="TopDrag"
+                  x:Name="Top">
+           </Image>
+           <Image Grid.Row="0" Grid.Column="2"
+                  Grid.ColumnSpan="2"
+                  Source="../Resources/Main/char_icon/chara_overflow_back.png"
+                  Height="85" Width="85"
+                  Margin="0,-23,0,0"
+                  VerticalAlignment="Top">
+        </Image>
+        
+        <Image Grid.Row="0" Grid.Column="2"
+               Grid.ColumnSpan="2"
+               Height="58" Width="58"
+               Source="../Resources/char/0_icon.png"
+               Margin="0,-9.7 ,0,0"
+               VerticalAlignment="Top"
+               x:Name="HeadIcon">
+        </Image>
+        <Button Grid.Row="0" Grid.Column="2"
+               Grid.ColumnSpan="2"
+               Height="70" Width="70"
+               Margin="0,-16 ,0,0"
+               BorderThickness="0"
+               VerticalAlignment="Top"
+               Style="{StaticResource BtnSetting}"
+               Tag="../Resources/Main/char_icon/char_icon_border_pressed.png"
+               >
+               <Button.Background>
+                   <ImageBrush ImageSource="../Resources/Main/char_icon/char_icon_border.png"></ImageBrush>
+               </Button.Background>
+        </Button>
+        <Button Grid.Row="0" Grid.Column="3"
+                Height="37" Width="73.5"
+                VerticalAlignment="Top"
+                BorderThickness="0"
+                Margin="20,-6.44,0,0"
+                Style="{StaticResource BtnSetting}"
+                Tag="../Resources/Main/topbar/top_button_pressed.png">
+            <Button.Background>
+                <ImageBrush ImageSource="../Resources/Main/topbar/top_button_settings.png"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Image Grid.Row="0" Grid.Column="3"
+               Source="../Resources/Main/topbar/settings.png"
+               Height="18" Width="18"
+               VerticalAlignment="Top"
+               IsHitTestVisible="False"
+               Opacity="0.7"
+               Margin="20,7,0,0"
+               >
+        </Image>
+        <Label Grid.Row="0" Grid.Column="3"
+               Content="设定"
+               FontFamily="../Resources/Fonts/#Noto Sans CJK SC Regular"
+               Foreground="#5C4561"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Center"
+               IsHitTestVisible="False"
+               BorderThickness="0"
+               Margin="18,2.5,0,0">
+        </Label>
+        <Label Grid.Row="0" Grid.Column="3"
+               Content="设定"
+               FontFamily="../Resources/Fonts/#Noto Sans CJK SC Regular"
+               Foreground="#5C4561"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Center"
+               IsHitTestVisible="False"
+               BorderThickness="0"
+               Margin="22,2.5,0,0">
+        </Label>
+        <Label Grid.Row="0" Grid.Column="3"
+               Content="设定"
+               FontFamily="../Resources/Fonts/#Noto Sans CJK SC Regular"
+               Foreground="#5C4561"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Center"
+               IsHitTestVisible="False"
+               BorderThickness="0"
+               Margin="18,1.5,0,0">
+        </Label>
+        <Label Grid.Row="0" Grid.Column="3"
+               Content="设定"
+               FontFamily="../Resources/Fonts/#Noto Sans CJK SC Regular"
+               Foreground="#5C4561"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Center"
+               IsHitTestVisible="False"
+               BorderThickness="0"
+               Margin="22,1.5,0,0">
+        </Label>
+        <Label Grid.Row="0" Grid.Column="3"
+               Content="设定"
+               FontFamily="../Resources/Fonts/#Noto Sans CJK SC Regular"
+               Foreground="White"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Center"
+               BorderThickness="0"
+               IsHitTestVisible="False"
+               Margin="20,2,0,0"
+               >
+        </Label>
+        <Label Grid.Row="0" Grid.Column="4"
+               Height="37" Width="73.5"
+               VerticalAlignment="Top"
+               Margin="0,3,40,0"
+               Foreground="#292727"
+               FontFamily="../Resources/Fonts/#Noto Sans CJK SC Regular"
+               IsHitTestVisible="False"
+               Content="记忆源点">
+        </Label>
+        <Button Grid.Row="0" Grid.Column="4"
+                Height="37" Width="73.5"
+                VerticalAlignment="Top"
+                Margin="80,-6.44,0,0"
+                Style="{StaticResource BtnSetting}"
+                Tag="../Resources/Main/topbar/top_button_special_pressed.png"
+                >
+            <Button.Background>
+                <ImageBrush ImageSource="../Resources/Main/topbar/top_button_special.png"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Label Grid.Row="0" Grid.Column="4"
+               VerticalAlignment="Top" HorizontalContentAlignment="Center"
+               Height="30" Width="70"
+               Margin="80,3,0,0"
+               Content="300"
+               FontFamily="../Resources/Fonts/#Exo"
+               Foreground="White"
+               IsHitTestVisible="False"
+               FontSize="14"
+               x:Name="Money">
+        </Label>
+        <Label Grid.Row="0" Grid.Column="2"
+               VerticalAlignment="Top"
+               HorizontalContentAlignment="Right"
+               Height="35"
+               Margin="0,0,35,0"
+               Content="616sb"
+               FontFamily="../Resources/Fonts/#GeoSansLight"
+               FontSize="20"
+               FontWeight="Bold"
+               Foreground="#342F31"
+               IsHitTestVisible="False"
+               x:Name="PlayerName">
+        </Label>
+        <Label Grid.Row="0" Grid.Column="0"
+               Grid.ColumnSpan="2"
+               VerticalAlignment="Top"
+               HorizontalContentAlignment="Left"
+               Height="35"
+               Margin="10,0,0,0"
+               Content="Arcaea-LinkGame"
+               FontSize="20"
+               Foreground="#342F31"
+               IsHitTestVisible="False"
+               x:Name="Title"
+        />
+        <Image Grid.Row="0" Grid.Column="2"
+               Grid.ColumnSpan="2"
+               Height="40" 
+               Margin="56,0,0,110"
+               IsHitTestVisible="False"
+               x:Name="RattingBoard"></Image>
+        <Label Grid.Row="0" Grid.Column="2"
+               Grid.ColumnSpan="2"
+               IsHitTestVisible="False"
+               HorizontalContentAlignment="Center"
+               FontFamily="../Resources/Fonts/#Exo"
+               ContentStringFormat="{}{0:F2}"
+               Foreground="White"
+               FontSize="13"
+               Height="40" Width="40"
+               Margin="55,0,0,96"
+               x:Name="RattingScore"></Label>
+    </Grid>
+</Page>
